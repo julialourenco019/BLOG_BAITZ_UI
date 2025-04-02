@@ -1,0 +1,319 @@
+
+
+<button class="new-post-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+    <i class="fas fa-plus me-2"></i>Novo Post
+</button>
+<button class="new-post-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+    <i class="fas fa-plus me-2"></i>Editar Post
+</button>
+<button class="new-post-btn" data-bs-toggle="modal" data-bs-target="excluirPostModal">
+    <i class="fas fa-plus me-2"></i>Excluir
+</button>
+<!-- Conteúdo principal -->
+<main class="container">
+    <!-- Filtros -->
+    <section class="filter-section">
+        <div class="filter-row">
+            <form class="search-form">
+                <input type="text" placeholder="Buscar posts...">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            
+            <div class="filter-dropdown">
+                <select>
+                    <option value="">Status</option>
+                    <option value="published">Publicado</option>
+                    <option value="draft">Rascunho</option>
+                </select>
+            </div>
+            
+            <div class="filter-dropdown">
+                <select>
+                    <option value="">Categoria</option>
+                    <option value="receitas">Receitas</option>
+                    <option value="dicas">Dicas de Cozinha</option>
+                    <option value="restaurantes">Restaurantes</option>
+                    <option value="saude">Alimentação Saudável</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="filter-count">
+            <span>Mostrando <strong>5</strong> de <strong>12</strong> posts</span>
+            <span>
+                <button class="btn btn-sm btn-outline-secondary">
+                    <i class="fas fa-sync-alt me-1"></i>Atualizar
+                </button>
+            </span>
+        </div>
+    </section>
+
+ 
+    <div class="row">
+        <!-- Post 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="post-card">
+                <div class="post-image">
+                    <img src="https://img.freepik.com/fotos-gratis/vista-frontal-deliciosas-panquecas-com-frutas-e-bolos-doces-em-superficie-escura-bolo-sobremesa-doce_140725-82080.jpg?t=st=1743557395~exp=1743560995~hmac=b933d66fd40f983a69968748da2607f9f98927974c552f407f3982aaafe95287&w=740" alt="Risoto de Camarão">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Receitas</span>
+                    <span class="post-status status-published">Publicado</span>
+                    <h3 class="post-title">Risoto de Camarão ao Limão</h3>
+                    <div class="post-date">
+                        <i class="far fa-calendar-alt me-1"></i> 23 Mar 2025
+                    </div>
+                    <p class="post-description">
+                        Um delicioso risoto cremoso com camarões suculentos e finalizado com raspas de limão siciliano.
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-stats">
+                            <span><i class="far fa-eye me-1"></i> 1.2k</span>
+                            <span><i class="far fa-comment me-1"></i> 24</span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="edit-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                           
+                              <button class="delete-btn" onclick="showDeleteConfirmation('Risoto de Camarão ao Limão')">
+                                <i class="fas fa-trash"></i>
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="post-card">
+                <div class="post-image">
+                    <img src="https://img.freepik.com/fotos-gratis/bolo-de-mel-em-cima-da-mesa_140725-4751.jpg?t=st=1743557361~exp=1743560961~hmac=fec14616f18bd0ba743c041d0e19861821a3e84f6a50e9aae2346f327d64e890&w=740" alt="10 Técnicas de Corte">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Dicas de Cozinha</span>
+                    <span class="post-status status-published">Publicado</span>
+                    <h3 class="post-title">10 Técnicas de Corte Essenciais</h3>
+                    <div class="post-date">
+                        <i class="far fa-calendar-alt me-1"></i> 17 Mar 2025
+                    </div>
+                    <p class="post-description">
+                        Aprenda as técnicas de corte usadas por chefs profissionais e eleve suas habilidades na cozinha.
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-stats">
+                            <span><i class="far fa-eye me-1"></i> 2.8k</span>
+                            <span><i class="far fa-comment me-1"></i> 42</span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="edit-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                           
+                          <button class="delete-btn" onclick="showDeleteConfirmation('10 Técnicas de Corte Essenciais')">
+                                <i class="fas fa-trash"></i>
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="post-card">
+                <div class="post-image">
+                    <img src="https://img.freepik.com/fotos-gratis/fatias-de-bolo-de-vista-frontal-com-biscoitos-e-frutas-em-fundo-escuro_140725-89430.jpg?t=st=1743557325~exp=1743560925~hmac=596e196c342a50556693af8f63620704f5b7d625599e18b101251b5a31b4ec0f&w=740" alt="Especiarias Essenciais">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Dicas de Cozinha</span>
+                    <span class="post-status status-draft">Rascunho</span>
+                    <h3 class="post-title">Especiarias Essenciais para Sua Cozinha</h3>
+                    <div class="post-date">
+                        <i class="far fa-calendar-alt me-1"></i> 15 Mar 2025
+                    </div>
+                    <p class="post-description">
+                        Um guia completo das especiarias mais versáteis que todo amante da gastronomia deve ter em casa.
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-stats">
+                            <span><i class="far fa-eye me-1"></i> 0</span>
+                            <span><i class="far fa-comment me-1"></i> 0</span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="edit-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                          
+                              <button class="delete-btn" onclick="showDeleteConfirmation('Especiarias Essenciais para Sua Cozinha')">
+                                <i class="fas fa-trash"></i>
+                            </button>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 4 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="post-card">
+                <div class="post-image">
+                    <img src="https://img.freepik.com/fotos-gratis/delicioso-pao-branco-e-integral-na-cesta_23-2148432295.jpg?t=st=1743557282~exp=1743560882~hmac=bc2912c3d9df37d8aea716d66c428ad8fe86d342268d58bb1688086ff69c6c60&w=740" alt="Pão Artesanal">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Receitas</span>
+                    <span class="post-status status-published">Publicado</span>
+                    <h3 class="post-title">Pão Artesanal com Fermentação Natural</h3>
+                    <div class="post-date">
+                        <i class="far fa-calendar-alt me-1"></i> 10 Mar 2025
+                    </div>
+                    <p class="post-description">
+                        Aprenda a fazer um delicioso pão artesanal com fermentação natural e uma crosta crocante.
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-stats">
+                            <span><i class="far fa-eye me-1"></i> 3.5k</span>
+                            <span><i class="far fa-comment me-1"></i> 57</span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="edit-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                          
+                               <button class="delete-btn" onclick="showDeleteConfirmation('Pão Artesanal com Fermentação Natural')">
+                                <i class="fas fa-trash"></i>
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Post 5 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="post-card">
+                <div class="post-image">
+                    <img src="https://img.freepik.com/fotos-gratis/interior-do-restaurante_1127-3394.jpg?t=st=1743557220~exp=1743560820~hmac=71c793446f0e55e6e81a9570cf415fe06d63fea597def73baa2b4e6c326e3aa6&w=1380" alt="Restaurantes em SP">
+                </div>
+                <div class="post-content">
+                    <span class="post-category">Restaurantes</span>
+                    <span class="post-status status-draft">Rascunho</span>
+                    <h3 class="post-title">Top 5 Restaurantes em São Paulo</h3>
+                    <div class="post-date">
+                        <i class="far fa-calendar-alt me-1"></i> 5 Mar 2025
+                    </div>
+                    <p class="post-description">
+                        Conheça os cinco melhores restaurantes de São Paulo para uma experiência gastronômica inesquecível.
+                    </p>
+                    <div class="post-footer">
+                        <div class="post-stats">
+                            <span><i class="far fa-eye me-1"></i> 0</span>
+                            <span><i class="far fa-comment me-1"></i> 0</span>
+                        </div>
+                        <div class="post-actions">
+                            <button class="edit-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            
+                             <button class="delete-btn">
+                                <i class="fas fa-trash"></i>
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <!-- Estado vazio (comentado por padrão) -->
+    <!--
+    <div class="empty-state">
+        <i class="far fa-file-alt"></i>
+        <h3>Nenhum post encontrado</h3>
+        <p>Você ainda não criou nenhum post ou os filtros aplicados não retornaram resultados.</p>
+        <button class="new-post-btn" data-bs-toggle="modal" data-bs-target="#editPostModal">
+            <i class="fas fa-plus me-2"></i>Criar Novo Post
+        </button>
+    </div>
+    -->
+</main>
+
+<div class="confirm-dialog" id="deleteConfirmDialog">
+    <div class="confirm-content">
+        
+        <div class="confirm-buttons">
+          
+        </div>
+         <button class="btn-cancel">Cancelar</button>
+            <button class="btn-confirm" >Excluir</button> 
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="editPostModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editPostModalLabel">Editar Post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="postTitle" class="form-label">Título do Post</label>
+                        <input type="text" class="form-control" id="editPostTitle" placeholder="Digite o título do post">
+                    </div>
+                    
+                       
+                    <div class="mb-3">
+                        <label for="postDescription" class="form-label">Descrição</label>
+                        <textarea class="form-control" id="postDescription" rows="2" placeholder="Breve descrição do post"></textarea>
+                    </div>
+                   
+                    <div class="mb-3">
+                        <label for="postImage" class="form-label">Imagem de Capa</label>
+                        <input type="file" class="form-control" id="postImage">
+                    </div>
+                   
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary btn-save">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<script>
+    
+    function showDeleteConfirmation(title) {
+        document.getElementById('postTitle').textContent = title;
+        document.getElementById('deleteConfirmDialog').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function hideDeleteConfirmation() {
+        document.getElementById('deleteConfirmDialog').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+    
+    function deletePost() {
+        const title = document.getElementById('postTitle').textContent;
+
+        alert(`Post "${title}" foi excluído com sucesso!`);
+        
+     
+    }
+</script>
+    

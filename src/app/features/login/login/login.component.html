@@ -1,0 +1,71 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- Modal de Login -->
+ <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-body">
+              <div class="login-container">
+                  <div class="login-image">
+                      <img src="https://img.freepik.com/fotos-gratis/vista-superior-do-conceito-de-natureza-morta-do-livro-de-receitas_23-2149056002.jpg?t=st=1743444515~exp=1743448115~hmac=89bfcb4270c885312d7ea2c6565d3a9b55d4a4be7ea569bcf34f4688a01d55bb&w=740" alt="Imagem de comida">
+                  </div>
+                  <div class="login-form-container">
+                      <button type="button" class="close-button" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+                      <div class="login-header">
+                          <h2>Bem-vindo de volta!</h2>
+                          <p>Entre com suas credenciais para acessar o seu perfil</p>
+                      </div>
+                      <form>
+                          <div class="form-group">
+                              <label for="email">E-mail</label>
+                              <input type="email" formControlName="email" class="form-control"  required placeholder="Seu e-mail">
+                              <div  class="invalid-feedback">
+                                <div >Email é obrigatório</div>
+                                <div >Email deve ser um endereço válido</div>
+                              </div>
+                            </div>
+                          <div class="form-group">
+                              <label for="password">Senha</label>
+                              <input type="password"  formControlName="password" class="form-control" required placeholder="Sua senha">
+                              <div  class="invalid-feedback">
+                                <div >Senha é obrigatória</div>
+                              </div>
+                          </div>
+                          <div class="forgot-password">
+                            <div class="form-group">
+                                <button [disabled]="loading" class="btn btn-primary">
+                                  <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                  Entrar
+                                </button>
+                                <a routerLink="/register" class="btn btn-link">Registrar</a>
+                              </div>
+                              <div *ngIf="error" class="alert alert-danger mt-3">{{error}}</div>
+                          
+        
+                          </div>
+                        </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Bootstrap & Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script>
+  // Script para prevenir o envio do formulário (apenas para demonstração)
+  document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      if (form) {
+          form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              alert('Funcionalidade de login seria implementada aqui!');
+          });
+      }
+      
+      // Inicializa o modal
+      const loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+  });
+</script>
